@@ -1,0 +1,132 @@
+$news-letter: 4.2rem;
+$netflix-red: #dc0510;
+$netflix-white: #ffffff;
+$backdrop-height: 47rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    body{
+        height: 100%;
+        background-color: black;
+        font-family: "Poppins", sans-serif;
+    }
+}
+.container{
+    height: 47rem;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 -11rem;
+    border-bottom: 0.5rem solid white;
+    display: flex;
+    flex: {
+        direction: column;
+    }
+    
+}
+
+.backdrop{
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    display: flex;
+    height: $backdrop-height;
+    flex: {
+        direction: column;
+    }
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    select{
+        height: 2.1rem;
+        width: 6rem;
+        background: black;
+        color: $netflix-white;
+        margin: 1.5rem;
+        border: 1px solid $netflix-white;
+        text-align: center;
+    }
+    button{
+        margin: 1.5rem;
+        margin-right: 3rem;
+        height: 2.1rem;
+        width: 6rem;
+        background: $netflix-red;
+        border: none;
+        border-radius: 0.2rem;
+    }
+    a{
+        text-decoration: none;
+        color: $netflix-white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+    }
+}
+
+.logo{
+    font-size: 4rem;
+    color: $netflix-red;
+    margin-right: auto;
+    padding: 0.5rem;
+    padding-left: 3rem;
+}
+
+.backdrop-content{
+    z-index: 1;
+    display: flex;
+    flex: {
+        direction: column;
+    }
+    color: $netflix-white;
+    align-items: center;
+    justify-content: center;
+    height: $backdrop-height;
+    text-align: center;
+    h1{
+        line-height: 5rem;
+        width: 40%;
+        font-size: 3.8rem;
+    }
+    h2{
+        width: 60%;
+        font-size: 1.6rem;
+        padding: 1rem;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 100;
+        padding-bottom: 1rem;
+    }
+    form{
+        display: flex;
+        input[type="email"]{
+            width: 30rem;
+            height: $news-letter;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            color: rgba($color: #000000, $alpha: 0.5);
+        }
+        button{
+            width: 14rem;
+            height: $news-letter;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: white;
+            background-color: $netflix-red;
+            text-decoration: none;
+            border: none;
+        }
+    }
+    
+    
+}
