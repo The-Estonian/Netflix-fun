@@ -27,99 +27,12 @@ html body {
 }
 
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.44);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 46rem;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.first-row {
-  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg"), red;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0 -11rem;
-  border-bottom: 0.5rem solid white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 46rem;
-}
-
-.second-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #ffffff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.second-row h1 {
-  line-height: 5rem;
-  width: 40%;
-  font-size: 3.8rem;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 1;
-}
-
-.header select {
-  height: 2.1rem;
-  width: 6rem;
-  background: black;
-  color: #ffffff;
-  margin: 1.5rem;
-  border: 1px solid #ffffff;
-  text-align: center;
-}
-
-.header button {
-  margin: 1.5rem;
-  margin-right: 3rem;
-  height: 2.1rem;
-  width: 6rem;
-  background: #dc0510;
-  border: none;
-  border-radius: 0.2rem;
-}
-
-.header a {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-}
-
-.logo {
-  font-size: 4rem;
-  color: #dc0510;
-  margin-right: auto;
-  padding: 0.5rem;
-  padding-left: 3rem;
 }
 
 .backdrop-content {
@@ -145,7 +58,7 @@ html body {
 .backdrop-content h1 {
   line-height: 5rem;
   width: 40%;
-  font-size: 3.8rem;
+  font-size: 3.7rem;
 }
 
 .backdrop-content h2 {
@@ -185,5 +98,121 @@ html body {
   background-color: #dc0510;
   text-decoration: none;
   border: none;
+}
+
+.first-row {
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg"), red;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 -11rem;
+  border-bottom: 0.5rem solid #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 46rem;
+}
+
+.first-row .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.first-row .header select {
+  height: 2.1rem;
+  width: 6rem;
+  background: black;
+  color: #ffffff;
+  margin: 1.5rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+
+.first-row .header button {
+  margin: 1.5rem;
+  margin-right: 3rem;
+  height: 2.1rem;
+  width: 6rem;
+  background: #dc0510;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.first-row .header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.first-row .header-logo {
+  font-size: 4rem;
+  color: #dc0510;
+  margin-right: auto;
+  padding: 0.5rem;
+  padding-left: 3rem;
+}
+
+.second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  height: 25rem;
+  border-bottom: 0.5rem solid #222222;
+}
+
+.second-row img {
+  height: 100%;
+}
+
+.second-row--titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.second-row--titles h1 {
+  line-height: 5rem;
+  width: 50%;
+  font-size: 3.7rem;
+}
+
+.second-row--titles h2 {
+  width: 50%;
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.second-row--titles h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,28 @@ $news-letter: 4.2rem;
 $netflix-red: #dc0510;
 $netflix-white: #ffffff;
 $backdrop-height: 46rem;
-$row-heights: 20rem;
+$row-heights: 25rem;
+$row-border: #222222;
+
+@mixin netflix-fonts ($h1-width-value, $h2-width-value) {
+
+    h1{
+        line-height: 5rem;
+        width: $h1-width-value;
+        font-size: 3.7rem;
+    }
+    h2{
+        width: $h2-width-value;
+        font-size: 1.6rem;
+        padding: 1rem;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 100;
+        padding-bottom: 1rem;
+    }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
@@ -28,12 +49,47 @@ html{
 }
 
 .backdrop{
-    background-color: rgba($color: #000000, $alpha: 0.44);
+    background-color: rgba($color: #000000, $alpha: 0.8);
     height: $backdrop-height;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+
+    &-content{
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        z-index: 1;
+        color: $netflix-white;
+        align-items: center;
+        justify-content: center;
+        height: $backdrop-height;
+        text-align: center;
+        @include netflix-fonts(40%, 60%);
+        form{
+            display: flex;
+            input[type="email"]{
+                width: 30rem;
+                height: $news-letter;
+                font-family: "Poppins", sans-serif;
+                font-size: 1rem;
+                color: rgba($color: #000000, $alpha: 0.5);
+            }
+            button{
+                width: 14rem;
+                height: $news-letter;
+                font-family: "Poppins", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: white;
+                background-color: $netflix-red;
+                text-decoration: none;
+                border: none;
+            }
+        }
+    }
 }
 
 .first-row{
@@ -41,12 +97,52 @@ html{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 -11rem;
-    border-bottom: 0.5rem solid white;
+    border-bottom: 0.5rem solid $row-border;
     display: flex;
     flex: {
         direction: column;
     } 
     height: $backdrop-height;
+
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        select{
+            height: 2.1rem;
+            width: 6rem;
+            background: black;
+            color: $netflix-white;
+            margin: 1.5rem;
+            border: 1px solid $netflix-white;
+            text-align: center;
+        }
+        button{
+            margin: 1.5rem;
+            margin-right: 3rem;
+            height: 2.1rem;
+            width: 6rem;
+            background: $netflix-red;
+            border: none;
+            border-radius: 0.2rem;
+        }
+        a{
+            text-decoration: none;
+            color: $netflix-white;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+        }
+    
+        &-logo{
+            font-size: 4rem;
+            color: $netflix-red;
+            margin-right: auto;
+            padding: 0.5rem;
+            padding-left: 3rem;
+        }
+    }
+    
 }
 
 .second-row{
@@ -54,103 +150,28 @@ html{
     flex: {
         direction: row;
     }
+    justify-content:center;
+    align-items: center;
     color: $netflix-white;
-    align-items: center;
-    justify-content: center;
-    h1{
-        line-height: 5rem;
-        width: 40%;
-        font-size: 3.8rem;
-    }
-}
+    height: $row-heights;
+    border-bottom: 0.5rem solid $row-border;
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    select{
-        height: 2.1rem;
-        width: 6rem;
-        background: black;
-        color: $netflix-white;
-        margin: 1.5rem;
-        border: 1px solid $netflix-white;
-        text-align: center;
+    img{
+        height: 100%;
     }
-    button{
-        margin: 1.5rem;
-        margin-right: 3rem;
-        height: 2.1rem;
-        width: 6rem;
-        background: $netflix-red;
-        border: none;
-        border-radius: 0.2rem;
-    }
-    a{
-        text-decoration: none;
-        color: $netflix-white;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-    }
-}
 
-.logo{
-    font-size: 4rem;
-    color: $netflix-red;
-    margin-right: auto;
-    padding: 0.5rem;
-    padding-left: 3rem;
-}
-
-.backdrop-content{
-    display: flex;
-    flex: {
-        direction: column;
-    }
-    z-index: 1;
-    color: $netflix-white;
-    align-items: center;
-    justify-content: center;
-    height: $backdrop-height;
-    text-align: center;
-    h1{
-        line-height: 5rem;
-        width: 40%;
-        font-size: 3.8rem;
-    }
-    h2{
-        width: 60%;
-        font-size: 1.6rem;
-        padding: 1rem;
-        font-weight: 500;
-    }
-    h3{
-        font-size: 1rem;
-        font-weight: 100;
-        padding-bottom: 1rem;
-    }
-    form{
+    &--titles{
+        @include netflix-fonts(50%, 50%);
         display: flex;
-        input[type="email"]{
-            width: 30rem;
-            height: $news-letter;
-            font-family: "Poppins", sans-serif;
-            font-size: 1rem;
-            color: rgba($color: #000000, $alpha: 0.5);
+        flex: {
+            direction: column;
         }
-        button{
-            width: 14rem;
-            height: $news-letter;
-            font-family: "Poppins", sans-serif;
-            font-size: 1.6rem;
-            font-weight: 500;
-            color: white;
-            background-color: $netflix-red;
-            text-decoration: none;
-            border: none;
-        }
+        
     }
     
-    
+
 }
+
+
+
+
