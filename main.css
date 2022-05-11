@@ -17,8 +17,26 @@ html body {
 }
 
 .container {
-  height: 47rem;
-  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.44);
+  height: 46rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.first-row {
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg"), red;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0 -11rem;
@@ -30,21 +48,30 @@ html body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 46rem;
 }
 
-.backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
+.second-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 47rem;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.second-row h1 {
+  line-height: 5rem;
+  width: 40%;
+  font-size: 3.8rem;
 }
 
 .header {
@@ -54,6 +81,10 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
 }
 
 .header select {
@@ -92,7 +123,6 @@ html body {
 }
 
 .backdrop-content {
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,6 +130,7 @@ html body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
   color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -107,7 +138,7 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 47rem;
+  height: 46rem;
   text-align: center;
 }
 

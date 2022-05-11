@@ -1,7 +1,8 @@
 $news-letter: 4.2rem;
 $netflix-red: #dc0510;
 $netflix-white: #ffffff;
-$backdrop-height: 47rem;
+$backdrop-height: 46rem;
+$row-heights: 20rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
@@ -18,9 +19,25 @@ html{
         font-family: "Poppins", sans-serif;
     }
 }
+
 .container{
-    height: 47rem;
-    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    display: flex;
+    flex: {
+        direction: column;
+    } 
+}
+
+.backdrop{
+    background-color: rgba($color: #000000, $alpha: 0.44);
+    height: $backdrop-height;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.first-row{
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/5430a40a-0c89-409c-b20b-1124a288368a/EE-en-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg"), red;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 -11rem;
@@ -28,23 +45,30 @@ html{
     display: flex;
     flex: {
         direction: column;
-    }
-    
+    } 
+    height: $backdrop-height;
 }
 
-.backdrop{
-    background-color: rgba($color: #000000, $alpha: 0.6);
+.second-row{
     display: flex;
-    height: $backdrop-height;
     flex: {
-        direction: column;
+        direction: row;
     }
+    color: $netflix-white;
+    align-items: center;
     justify-content: center;
+    h1{
+        line-height: 5rem;
+        width: 40%;
+        font-size: 3.8rem;
+    }
 }
 
 .header{
     display: flex;
     justify-content: center;
+    align-items: center;
+    z-index: 1;
     select{
         height: 2.1rem;
         width: 6rem;
@@ -80,11 +104,11 @@ html{
 }
 
 .backdrop-content{
-    z-index: 1;
     display: flex;
     flex: {
         direction: column;
     }
+    z-index: 1;
     color: $netflix-white;
     align-items: center;
     justify-content: center;
